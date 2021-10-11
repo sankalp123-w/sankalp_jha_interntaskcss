@@ -1,25 +1,34 @@
-body {
-  height: 100vh;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+.mobilenav {
+    display: none;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 15vw;
+    padding-left: 4.4rem;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+  }
+  .navbar::-webkit-scrollbar {
+    width: 5px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Track */
+.navbar::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px transparent; 
+    border:none
 }
-
 @media only screen and (max-width: 1024px) {
   .navbar {
     padding-left: 2.5rem;
+    width: 30%;
+   
   }
   .navbar .header .brand {
-    font-size: 2rem;
+    font-size: 1rem;
   }
   .navbar .navlinks li {
     margin-bottom: 3rem;
@@ -37,6 +46,7 @@ code {
   }
   .content .productscarousel {
     overflow-x: scroll;
+    
   }
 }
 
@@ -213,3 +223,66 @@ code {
     opacity: 1;
   }
 }
+
+/* Handle */
+.navbar::-webkit-scrollbar-thumb {
+    background:wheat; 
+    border-radius: 10px;
+}
+
+
+  
+  .navbar .header {
+    margin: 4rem 0 4.5rem 0;
+  }
+  
+  .navbar .header .brand {
+    font-size: 2.5rem;
+    font-weight: 400px;
+    line-height: 2.7rem;
+    
+  }
+  
+  .navbar .navlinks li {
+      list-style: none;
+    margin-bottom: 3.4rem;
+    position: relative;
+    height: 1.3rem;
+  }
+  
+  .navbar .navlinks li a {
+    text-decoration: none;
+    position: absolute;
+    color: #818181;
+    font-size: 1.1rem;
+    font-weight: 300;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar .navlinks li a:hover {
+    color: orangered;
+    font-size: 1.5rem;
+  }
+  
+  .navbar .navlinks li:nth-child(1) a {
+    
+     border-bottom: solid red;
+     
+  }
+  
+  .navbar .cartbutton {
+    display: inline-block;
+    background-color: #ff4e4e;
+    padding: 1.2rem 3.8rem;
+    border-radius: 40px;
+    color: white;
+    font-size: 1.1rem;
+    margin-top: 2.3rem;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar .cartbutton:hover {
+    -webkit-box-shadow: 0 0 15px #ff4e4e;
+    box-shadow: 0 0 15px #ff4e4e;
+  }
+  
